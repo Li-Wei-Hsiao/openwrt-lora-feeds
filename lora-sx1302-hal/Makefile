@@ -25,7 +25,7 @@ define Package/libloragw
   CATEGORY:=Libraries
   TITLE:=Driver/HAL library for Semtech SX1302
   URL:=https://www.semtech.com/products/wireless-rf/lora-gateways/sx1302
-  DEPENDS:=+kmod-spi-dev
+  #DEPENDS:=+kmod-spi-dev
 endef
 
 define Package/libloragw-tests
