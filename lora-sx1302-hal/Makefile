@@ -20,7 +20,7 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/sx1302_hal-$(PKG_VERSION)
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
-define Package/libsx1302
+define Package/libloragw
   SECTION:=libs
   CATEGORY:=Libraries
   TITLE:=Driver/HAL library for Semtech SX1302
@@ -50,7 +50,7 @@ define Build/InstallDev
 	$(CP) $(PKG_BUILD_DIR)/libloragw/inc/sx1250_* $(1)/usr/include/libloragw
 	$(CP) $(PKG_BUILD_DIR)/libloragw/inc/sx125x_* $(1)/usr/include/libloragw
 	$(CP) $(PKG_BUILD_DIR)/libloragw/inc/sx1261_* $(1)/usr/include/libloragw
-  $(CP) $(PKG_BUILD_DIR)/libloragw/config.h $(1)/usr/include/libloragw
+  	$(CP) $(PKG_BUILD_DIR)/libloragw/config.h $(1)/usr/include/libloragw
 
 	$(INSTALL_DIR) $(1)/usr/lib
 	$(CP) $(PKG_BUILD_DIR)/libloragw/libloragw.so* $(1)/usr/lib/
